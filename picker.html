@@ -422,7 +422,12 @@ var items = [
 ];
 
 var myPicker = new picker.Picker({
-    items: items
+    items: items,
+    localStorageKey: 'picker-state',
+    defaultSettings: {
+        minBatchSize: 2,
+        maxBatchSize: 5
+    }
 });
 
 var pickerUI = new PickerUI(myPicker, {
